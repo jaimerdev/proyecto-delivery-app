@@ -1,0 +1,24 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as m;
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    @include m.desktop {
+        width: auto;
+        flex-direction: row;
+    }
+
+    &__link {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var.$black;
+
+        &--signin {
+            @include m.button(var.$primary, var.$white);
+        }
+    }
+}

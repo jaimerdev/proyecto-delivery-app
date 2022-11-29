@@ -1,0 +1,15 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as m;
+
+.testimonials {
+    padding: var.$separation 0;
+
+    &__heading {
+        text-align: center;
+    }
+    &__grid {
+        @include m.tablet {
+            @include m.grid(5, 2rem);
+        }
+    }
+}
